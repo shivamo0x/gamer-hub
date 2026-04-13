@@ -36,7 +36,7 @@ export default function Header({
           </button>
           <div className="flex min-w-0 items-center gap-3">
             <Image
-              src="/My-Logo.png"
+              src="/My-SecondLogo.png"
               alt="Logo"
               width={50}
               height={50}

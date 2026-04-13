@@ -44,8 +44,8 @@ export const gameData: Game[] = [
   {
     slug: "genshin-impact",
     name: "Genshin Impact",
-    imgSrc: "/Genshin_Impact.webp",
-    bannerSrc: "/Genshin_Impact.webp",
+    imgSrc: "/side-bar/genshin-impact-logo.webp",
+    bannerSrc: "/side-bar/genshin-impact.webp",
     uid: "Asia 8234 11822",
     favoriteCharacter: "Raiden Shogun",
     favoriteCharacterDescription: "My go-to carry for polished electro teams, clean burst windows, and that unmistakable Inazuma presence.",

@@ -30,8 +30,15 @@ export const gamesIPlay: GamePlayItem[] = [
   },
   {
     slug: "free-fire-max",
-    name: "Free Fire Max",
+    name: "Free Fire India Server",
     image: "/ids-picture/free-fire-uid.jpg",
+    description: "Competitive battle royale experience built around quick matches and fast squad coordination.",
+    note: "Mostly a fun squad game for quick matches and chill sessions with friends.",
+  },
+  {
+    slug: "free-fire-max",
+    name: "Free Fire Indonesia Server",
+    image: "/ids-picture/free-fire-2uid.jpg",
     description: "Competitive battle royale experience built around quick matches and fast squad coordination.",
     note: "Mostly a fun squad game for quick matches and chill sessions with friends.",
   },

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -15,6 +16,10 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Gamer Hub",
   description: "Responsive gaming dashboard with a glassmorphism purple-blue interface.",
+  icons: {
+    icon: "/My-SecondLogo.png",
+    shortcut: "/My-SecondLogo.png",
+  },
 };
 
 export default function RootLayout({
@@ -27,7 +32,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <head>
+        <link rel="icon" href="/My-SecondLogo.png" />
+        <link rel="shortcut icon" href="/My-SecondLogo.png" />
+      </head>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
