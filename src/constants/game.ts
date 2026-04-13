@@ -884,7 +884,7 @@ export const gameData: Game[] = [
   },
   {
     slug: "free-fire-max",
-    name: "Free Fire Max",
+    name: "Free Fire",
     imgSrc: "/side-bar/Garena-logo.jpg",
     bannerSrc: "/side-bar/Garena-logo.jpg",
     uid: "FFM 71 440 298",
