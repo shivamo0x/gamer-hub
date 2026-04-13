@@ -57,12 +57,6 @@ const education = [
     score: "7.88 GPA",
     year: "2020 - 2023",
   },
-  {
-    title: "High School",
-    place: "UHS Sahaharpura",
-    score: "83.8%",
-    year: "2015 - 2020",
-  },
 ];
 
 function SectionCard({
