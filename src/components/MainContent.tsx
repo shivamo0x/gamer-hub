@@ -115,7 +115,7 @@ export default function MainContent({ selectedGame }: MainContentProps) {
         <div className="relative flex flex-col items-center text-center">
           <div className="relative h-28 w-28 overflow-hidden rounded-sm border border-neutral-300/30 shadow-[0_0_36px_rgba(176,179,184,0.22)] sm:h-36 sm:w-36">
             <Image
-              src="/Dalia.jpeg"
+              src="/Engen.jpg"
               alt="Shivam Kumar Rana"
               fill
               className="object-cover"

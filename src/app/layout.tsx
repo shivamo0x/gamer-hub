@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   title: "Gamer Hub",
   description: "Responsive gaming dashboard with a glassmorphism grey-zinc interface.",
   icons: {
-    icon: "/My-SecondLogo.png",
-    shortcut: "/My-SecondLogo.png",
+    icon: "/profile-pic.png",
+    shortcut: "/profile-pic.png",
   },
 };
 
@@ -33,8 +33,8 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <link rel="icon" href="/My-SecondLogo.png" />
-        <link rel="shortcut icon" href="/My-SecondLogo.png" />
+        <link rel="icon" href="/profile-pic.png" />
+        <link rel="shortcut icon" href="/profile-pic.png" />
       </head>
       <body className="min-h-full flex flex-col">
         {children}

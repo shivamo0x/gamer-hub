@@ -36,7 +36,7 @@ export default function Header({
           </button>
           <div className="flex min-w-0 items-center gap-3">
             <Image
-              src="/My-SecondLogo.png"
+              src="/profile-pic.png"
               alt="Logo"
               width={50}
               height={50}
@@ -64,7 +64,7 @@ export default function Header({
             <div className="glass-card flex items-center gap-3 rounded-sm border border-white/10 px-2 py-1.5 transition hover:border-neutral-300/30 hover:bg-white/6">
               <div className="h-9 w-9 overflow-hidden rounded-full border border-neutral-300/55 shadow-[0_0_18px_rgba(176,179,184,0.38)] sm:h-10 sm:w-10">
                 <Image
-                  src="/Dalia.jpeg"
+                  src="/Engen.jpg"
                   alt="Profile"
                   width={100}
                   height={100}
