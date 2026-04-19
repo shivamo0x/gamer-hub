@@ -1,18 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --bg-start: #03040d;
-  --bg-mid: #0d1230;
-  --bg-end: #071b42;
+  --bg-start: #0a0b0d;
+  --bg-mid: #17181b;
+  --bg-end: #25272b;
   --glass-bg: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.045),
-    rgba(255, 255, 255, 0.012)
+    rgba(236, 238, 240, 0.14),
+    rgba(125, 128, 132, 0.055)
   );
   --glass-strong: linear-gradient(
     145deg,
-    rgba(255, 255, 255, 0.06),
-    rgba(255, 255, 255, 0.015)
+    rgba(236, 238, 240, 0.18),
+    rgba(105, 108, 112, 0.075)
   );
 }
 
@@ -22,11 +22,12 @@ html {
 
 body {
   min-height: 100vh;
+  min-height: 100dvh;
   background:
-    radial-gradient(circle at 12% 10%, rgba(168, 85, 247, 0.24), transparent 20%),
-    radial-gradient(circle at 86% 16%, rgba(59, 130, 246, 0.22), transparent 24%),
-    radial-gradient(circle at 50% 100%, rgba(56, 189, 248, 0.1), transparent 20%),
-    radial-gradient(circle at 32% 66%, rgba(99, 102, 241, 0.14), transparent 26%),
+    radial-gradient(circle at 12% 10%, rgba(196, 199, 203, 0.2), transparent 20%),
+    radial-gradient(circle at 86% 16%, rgba(130, 134, 139, 0.2), transparent 24%),
+    radial-gradient(circle at 50% 100%, rgba(225, 226, 228, 0.1), transparent 20%),
+    radial-gradient(circle at 32% 66%, rgba(105, 108, 112, 0.16), transparent 26%),
     linear-gradient(135deg, var(--bg-start), var(--bg-mid) 48%, var(--bg-end));
   color: white;
   font-family: var(--font-geist-sans), sans-serif;
@@ -48,7 +49,7 @@ body::before {
 * {
   box-sizing: border-box;
   scrollbar-width: thin;
-  scrollbar-color: rgba(99, 102, 241, 0.55) rgba(255, 255, 255, 0.04);
+  scrollbar-color: rgba(166, 168, 172, 0.6) rgba(255, 255, 255, 0.04);
 }
 
 *::-webkit-scrollbar {
@@ -63,8 +64,8 @@ body::before {
 *::-webkit-scrollbar-thumb {
   background: linear-gradient(
     180deg,
-    rgba(139, 92, 246, 0.7),
-    rgba(56, 189, 248, 0.6)
+    rgba(198, 200, 204, 0.68),
+    rgba(118, 121, 126, 0.62)
   );
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.06);
@@ -73,8 +74,8 @@ body::before {
 *::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(
     180deg,
-    rgba(139, 92, 246, 0.85),
-    rgba(56, 189, 248, 0.75)
+    rgba(226, 228, 230, 0.8),
+    rgba(142, 145, 150, 0.72)
   );
 }
 
@@ -84,8 +85,8 @@ body::before {
   -webkit-backdrop-filter: blur(14px);
   border-color: rgba(255, 255, 255, 0.06);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 14px 36px rgba(2, 6, 23, 0.24);
+    inset 0 1px 0 rgba(255, 255, 255, 0.11),
+    0 14px 36px rgba(0, 0, 0, 0.22);
 }
 
 .glass-panel-strong {
@@ -93,19 +94,19 @@ body::before {
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.06),
-    0 16px 42px rgba(2, 6, 23, 0.28);
+    inset 0 1px 0 rgba(255, 255, 255, 0.13),
+    0 16px 42px rgba(0, 0, 0, 0.28);
 }
 
 .glass-card {
   background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.012)),
-    rgba(255, 255, 255, 0.008);
+    linear-gradient(180deg, rgba(238, 239, 241, 0.11), rgba(140, 143, 148, 0.04)),
+    rgba(230, 232, 234, 0.035);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   box-shadow:
-    inset 0 1px 0 rgba(255, 255, 255, 0.05),
-    0 12px 30px rgba(2, 6, 23, 0.18);
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 .accent-glow {
@@ -120,9 +121,9 @@ body::before {
   padding: 1px;
   background: linear-gradient(
     135deg,
-    rgba(168, 85, 247, 0.18),
-    rgba(96, 165, 250, 0.16),
-    rgba(255, 255, 255, 0.04)
+    rgba(238, 239, 241, 0.22),
+    rgba(135, 138, 143, 0.18),
+    rgba(255, 255, 255, 0.055)
   );
   -webkit-mask:
     linear-gradient(#fff 0 0) content-box,

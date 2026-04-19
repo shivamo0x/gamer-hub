@@ -139,7 +139,7 @@ function getStarRailPathDescriptor(pathType?: string) {
 
 function getImagePanelStyle(imageSrc: string) {
   return {
-    backgroundImage: `linear-gradient(135deg, rgba(15,23,42,0.82), rgba(15,23,42,0.58)), url(${imageSrc})`,
+    backgroundImage: `linear-gradient(135deg, rgba(18,18,20,0.82), rgba(64,64,68,0.58)), url(${imageSrc})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
   } as const;
@@ -198,15 +198,15 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
   };
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(76,29,149,0.22),transparent_28%),radial-gradient(circle_at_top_right,rgba(14,165,233,0.16),transparent_24%),linear-gradient(180deg,#040816_0%,#090f1f_45%,#07111d_100%)] px-4 pb-8 pt-4 sm:px-6 sm:pb-10">
+    <div className="relative min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top_left,rgba(118,121,126,0.22),transparent_28%),radial-gradient(circle_at_top_right,rgba(180,183,187,0.16),transparent_24%),linear-gradient(180deg,#0a0b0d_0%,#17181b_45%,#25272b_100%)] px-4 pb-8 pt-4 sm:px-6 sm:pb-10">
       <div className="pointer-events-none absolute inset-0">
-        <div className="absolute left-[-10rem] top-[-6rem] h-72 w-72 rounded-full bg-violet-500/20 blur-3xl" />
-        <div className="absolute right-[-8rem] top-20 h-80 w-80 rounded-full bg-sky-500/18 blur-3xl" />
+        <div className="absolute left-[-10rem] top-[-6rem] h-72 w-72 rounded-full bg-neutral-500/18 blur-3xl" />
+        <div className="absolute right-[-8rem] top-20 h-80 w-80 rounded-full bg-zinc-400/16 blur-3xl" />
       </div>
 
       <div className="relative mx-auto flex max-w-7xl flex-col gap-6">
         <motion.header
-          initial={{ y: -28, opacity: 0 }}
+          initial={{ y: -28, opacity: 1 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.45 }}
@@ -224,10 +224,10 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                 />
               </div>
               <div className="min-w-0">
-                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-sky-200/70">
+                <p className="text-xs font-semibold uppercase tracking-[0.3em] text-neutral-300/75">
                   Character Hub
                 </p>
-                <h1 className="truncate bg-gradient-to-r from-white via-sky-100 to-violet-200 bg-clip-text text-xl font-semibold text-transparent">
+                <h1 className="truncate bg-gradient-to-r from-white via-neutral-100 to-zinc-300 bg-clip-text text-xl font-semibold text-transparent">
                   {game.name}
                 </h1>
               </div>
@@ -235,7 +235,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
 
             <Link
               href="/"
-              className="ml-auto inline-flex items-center gap-2 rounded-sm border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:border-violet-300/30 hover:bg-white/8"
+              className="ml-auto inline-flex items-center gap-2 rounded-sm border border-white/10 bg-white/5 px-4 py-2 text-sm text-white transition hover:border-neutral-300/30 hover:bg-white/8"
             >
               <ArrowLeft size={16} />
               Back to Dashboard
@@ -243,7 +243,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
           </div>
 
           <div className="glass-card flex w-full items-center gap-2 rounded-sm border border-white/10 px-3 py-2 sm:max-w-xl">
-            <Search size={18} className="text-sky-100/75" />
+            <Search size={18} className="text-neutral-100/75" />
             <input
               type="text"
               value={query}
@@ -255,14 +255,14 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
         </motion.header>
 
         <motion.section
-          initial={{ opacity: 0, y: 22 }}
+          initial={{ opacity: 1, y: 22 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.35 }}
           className="glass-panel-strong rounded-sm border border-white/10 p-5 sm:p-6"
         >
           <div className="mb-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sky-200/70">
+            <p className="text-xs font-semibold uppercase tracking-[0.32em] text-neutral-300/75">
               My character picks
             </p>
             <h2 className="mt-2 text-2xl font-semibold text-white">
@@ -277,15 +277,15 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
               return (
                 <motion.div
                   key={character.name}
-                  initial={{ opacity: 0, y: 22 }}
+                  initial={{ opacity: 1, y: 22 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, amount: 0.2 }}
                   transition={{ delay: index * 0.05 }}
                   whileHover={{ y: -4, scale: 1.02 }}
                   className={`group overflow-hidden rounded-sm border text-left transition-all duration-300 ${
                     isActive
-                      ? "border-sky-300/30 bg-gradient-to-br from-violet-500/10 to-sky-500/8 shadow-[0_14px_38px_rgba(56,189,248,0.12)]"
-                      : "glass-card border-white/10 hover:border-violet-300/20 hover:shadow-[0_16px_36px_rgba(99,102,241,0.1)]"
+                      ? "border-neutral-300/30 bg-gradient-to-br from-zinc-400/12 to-neutral-600/12 shadow-[0_14px_38px_rgba(176,179,184,0.12)]"
+                      : "glass-card border-white/10 hover:border-neutral-300/20 hover:shadow-[0_16px_36px_rgba(160,163,168,0.1)]"
                   }`}
                 >
                   <div
@@ -305,10 +305,10 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                       }}
                       sizes="(max-width: 1280px) 100vw, 20vw"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 to-transparent" />
                     {showsCharacterBadges ? (
                       <div className="absolute right-2 top-2 z-10 flex flex-col items-end gap-1">
-                        <div className="flex items-center gap-1 rounded-sm border border-white/10 bg-slate-950/60 px-1.5 py-1 backdrop-blur-sm">
+                        <div className="flex items-center gap-1 rounded-sm border border-white/10 bg-zinc-950/60 px-1.5 py-1 backdrop-blur-sm">
                           <div className="relative h-4 w-4 overflow-hidden rounded-sm">
                             <Image
                               src={getTypeImage(character.type, character.typeImage, game.slug)}
@@ -320,7 +320,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                           </div>
                         </div>
                         {isStarRail ? (
-                          <div className="flex items-center gap-1 rounded-sm border border-white/10 bg-slate-950/60 px-1.5 py-1 backdrop-blur-sm">
+                          <div className="flex items-center gap-1 rounded-sm border border-white/10 bg-zinc-950/60 px-1.5 py-1 backdrop-blur-sm">
                             <div className="relative h-4 w-4 overflow-hidden rounded-sm">
                               <Image
                                 src={getCombatTypeImage(character.weapon)}
@@ -355,7 +355,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                     <button
                       type="button"
                       onClick={() => handleCharacterSelect(character)}
-                      className="rounded-sm border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs text-sky-100/85 transition hover:bg-white/8"
+                      className="rounded-sm border border-white/10 bg-white/5 px-2.5 py-1.5 text-xs text-neutral-100/85 transition hover:bg-white/8"
                     >
                       Show Details
                     </button>
@@ -370,7 +370,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
           <motion.section
             ref={detailsSectionRef}
             key={visibleCharacter.name}
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 1, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -14 }}
             transition={{ duration: 0.35 }}
@@ -378,7 +378,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
           >
             <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
               <div
-                className={`relative overflow-hidden rounded-sm border border-white/10 bg-[radial-gradient(circle_at_top,rgba(96,165,250,0.18),transparent_34%),linear-gradient(180deg,rgba(15,23,42,0.72),rgba(2,6,23,0.96))] shadow-[0_22px_60px_rgba(2,6,23,0.32)] ${
+                className={`relative overflow-hidden rounded-sm border border-white/10 bg-[radial-gradient(circle_at_top,rgba(176,179,184,0.18),transparent_34%),linear-gradient(180deg,rgba(20,20,22,0.72),rgba(0,0,0,0.96))] shadow-[0_22px_60px_rgba(0,0,0,0.32)] ${
                   usesNaturalRatioCharacterImages ? "" : "min-h-[320px]"
                 }`}
                 style={
@@ -403,13 +403,13 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                   }}
                   sizes="(max-width: 1024px) 100vw, 40vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/8 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/8 to-transparent" />
                 <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
               </div>
 
               <div className="flex flex-col gap-6">
                 <div>
-                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-sky-200/70">
+                  <p className="text-xs font-semibold uppercase tracking-[0.32em] text-neutral-300/75">
                     Character Details
                   </p>
                   <div className="mt-2 flex flex-wrap items-center justify-between gap-3">
@@ -427,7 +427,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                             sizes="20px"
                           />
                         </div>
-                        <span className="text-sm font-medium text-sky-100/85">
+                        <span className="text-sm font-medium text-neutral-100/85">
                           {getStarRailPathDescriptor(visibleCharacter.type)}
                         </span>
                       </div>
@@ -442,23 +442,23 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                             sizes="20px"
                           />
                         </div>
-                        <span className="text-sm font-medium text-sky-100/85">
+                        <span className="text-sm font-medium text-neutral-100/85">
                           {visibleCharacter.region}
                         </span>
                       </div>
                     ) : visibleCharacter.skillType ? (
                       <div className="inline-flex items-center rounded-sm border border-white/10 bg-white/6 px-3 py-2">
-                        <span className="text-sm font-medium text-sky-100/85">
+                        <span className="text-sm font-medium text-neutral-100/85">
                           {visibleCharacter.skillType}
                         </span>
                       </div>
                     ) : null}
                   </div>
-                  <p className="mt-4 text-sm leading-7 text-slate-200/78 sm:text-base">
+                  <p className="mt-4 text-sm leading-7 text-zinc-200/78 sm:text-base">
                     {visibleCharacter.description}
                   </p>
                   {(visibleCharacter.releaseDate || visibleCharacter.birthday) ? (
-                    <div className="mt-4 space-y-1 text-sm text-sky-100/72">
+                    <div className="mt-4 space-y-1 text-sm text-neutral-100/72">
                       {visibleCharacter.releaseDate ? (
                         <p>
                           Release Date: <span className="font-medium text-white">{visibleCharacter.releaseDate}</span>
@@ -472,7 +472,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                     </div>
                   ) : null}
                   {!hidesVoiceActors && (visibleCharacter.japaneseVoiceActor || visibleCharacter.englishVoiceActor) ? (
-                    <p className="mt-4 text-sm leading-7 text-sky-100/72">
+                    <p className="mt-4 text-sm leading-7 text-neutral-100/72">
                       Voice Actor :{" "}
                       <span className="font-medium text-white">
                         Japanese VA - {visibleCharacter.japaneseVoiceActor ?? "Not listed"}. English VA - {visibleCharacter.englishVoiceActor ?? "Not listed"}
@@ -485,7 +485,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                   <div className="grid gap-4">
                     {isStarRail ? (
                       <div className="glass-card rounded-sm border border-white/10 p-5">
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                           Combat Type
                         </p>
                         <div className="mt-3 flex items-center gap-3">
@@ -509,12 +509,12 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                           className="overflow-hidden rounded-sm border border-white/10"
                           style={getImagePanelStyle(visibleCharacter.weaponImage ?? "/weapon-core.svg")}
                         >
-                          <div className="bg-[radial-gradient(circle_at_top_right,rgba(96,165,250,0.14),transparent_28%)] p-5 backdrop-blur-[2px]">
-                          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                          <div className="bg-[radial-gradient(circle_at_top_right,rgba(176,179,184,0.14),transparent_28%)] p-5 backdrop-blur-[2px]">
+                          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                             Weapon
                           </p>
                           <div className="mt-3 flex items-center gap-3">
-                            <div className="relative h-12 w-12 overflow-hidden rounded-sm border border-white/10 bg-slate-950/45 shadow-[0_10px_24px_rgba(2,6,23,0.28)]">
+                            <div className="relative h-12 w-12 overflow-hidden rounded-sm border border-white/10 bg-zinc-950/45 shadow-[0_10px_24px_rgba(0,0,0,0.28)]">
                               <Image
                                 src={visibleCharacter.weaponImage ?? "/weapon-core.svg"}
                                 alt={visibleCharacter.weaponName ?? visibleCharacter.weapon ?? "Weapon"}
@@ -531,7 +531,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                         </div>
 
                         <div className="glass-card rounded-sm border border-white/10 p-5">
-                          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                          <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                             Weapon Type
                           </p>
                           <div className="mt-3 flex items-center gap-3">
@@ -553,7 +553,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                     )}
 
                     <div className="glass-card rounded-sm border border-white/10 p-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                         {typeLabel}
                       </p>
                       <div className="mt-3 flex items-center gap-3">
@@ -575,7 +575,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                 ) : showsCharacterMetadata ? (
                   <div className="grid gap-4 sm:grid-cols-2">
                     <div className="glass-card rounded-sm border border-white/10 p-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                         Role
                       </p>
                       <p className="mt-3 text-lg font-semibold text-white">
@@ -583,7 +583,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                       </p>
                     </div>
                     <div className="glass-card rounded-sm border border-white/10 p-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                      <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                         {typeLabel}
                       </p>
                       <p className="mt-3 text-lg font-semibold text-white">
@@ -592,7 +592,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                     </div>
                     {visibleCharacter.skillName || visibleCharacter.skillDescription ? (
                       <div className="glass-card rounded-sm border border-white/10 p-5 sm:col-span-2">
-                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-sky-200/65">
+                        <p className="text-xs font-semibold uppercase tracking-[0.24em] text-neutral-300/70">
                           Skill
                         </p>
                         <div className="mt-3 flex items-center gap-3">
@@ -612,7 +612,7 @@ export default function GameDetailsPage({ game }: GameDetailsPageProps) {
                           </p>
                         </div>
                         {visibleCharacter.skillDescription ? (
-                          <p className="mt-4 text-sm leading-7 text-slate-200/75">
+                          <p className="mt-4 text-sm leading-7 text-zinc-200/75">
                             {visibleCharacter.skillDescription}
                           </p>
                         ) : null}

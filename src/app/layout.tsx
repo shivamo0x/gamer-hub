@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Gamer Hub",
-  description: "Responsive gaming dashboard with a glassmorphism purple-blue interface.",
+  description: "Responsive gaming dashboard with a glassmorphism grey-zinc interface.",
   icons: {
     icon: "/My-SecondLogo.png",
     shortcut: "/My-SecondLogo.png",
